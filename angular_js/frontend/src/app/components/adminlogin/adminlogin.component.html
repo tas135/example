@@ -1,0 +1,21 @@
+<div class="container" class="custom-form">
+    <h1 class="h3 mb-3 font-weight-normal login-h1">Admin Login</h1>
+    <form (ngSubmit)="onSubmit()" #NicknameForm="ngForm">
+        <!-- Username -->
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" required [(ngModel)]="username" name="name" #name="ngModel" (keydown)="checkAdminInput()" placeholder="Username" autofocus>
+            <div [hidden]="checkUsernameFlag" class="alert alert-danger">
+                {{usernameError}}
+            </div>
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+            <input type="password" class="form-control" id="password" required [(ngModel)]="password" name="password" #name="ngModel" (keydown)="checkPasswordInput()" placeholder="Password" autofocus>
+            <div [hidden]="checkPasswordFlag" class="alert alert-danger">
+                {{passwordError}}
+            </div>
+        </div>
+        <!-- Submit button - disabled until both a username and password entered -->
+        <button type="submit" class="btn btn-lg submit-btn btn-block" [disabled]="!NicknameForm.form.valid">Submit</button>
+    </form>
+</div>

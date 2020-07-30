@@ -1,0 +1,15 @@
+<div class="container" class="custom-form">
+    <h1 class="h3 mb-3 font-weight-normal nickname-h1">Create a nickname</h1>
+    <form (ngSubmit)="onSubmit()" #NicknameForm="ngForm">
+        <div class="form-group">
+            <!-- Textbox for username -->
+            <input type="text" class="form-control" id="name" required [(ngModel)]="Nickname" name="name" #name="ngModel" (keydown)="checkInput()" placeholder="Nickname">
+            <!-- Error message displayed if the username already exists -->
+            <div [hidden]="checkFlag" class="alert alert-danger">
+                {{usernameError}}
+            </div>
+        </div>
+        <!-- 'Play' button disabled until a nickname is entered -->
+        <button type="submit" class="btn btn-lg btn-block play-btn" [disabled]="!NicknameForm.form.valid">Play</button>
+    </form>
+</div>

@@ -1,0 +1,38 @@
+<form class="form-sessionDetails" #NicknameForm="ngForm">
+    <div class="session-details-border">
+        <h1 class="h3 mb-3 font-weight-normal session-details-h1">Session Details</h1>
+
+        <!-- Display the name and location of the session -->
+        <!-- Implemented as a form to make it easier to edit the details (future work) -->
+        <label for="sessionName" class="name-lbl">Name</label>
+        <input type="text" id="sessionName" name="SessionName" class="form-control" value={{session.SessionName}} readonly>
+        <label for="sessionLocation" class="location-lbl">Location</label>
+        <input type="text" id="sessionLocation" name="Location" class="form-control" value={{session.Location}} readonly>
+
+
+        <!-- Position styling for checkboxes intentionally left in html file - doesn't work when moved to css -->
+        <div class="form-check checkbox-inline active-checkbox-div">
+            <input type="checkbox" class="form-check-input active active-checkbox" style="position: relative;" id="activeCheck" [(ngModel)]="session.ActiveStatus" [ngModelOptions]="{standalone: true}" (change)="updateStatus()">
+            <label class="form-check-label" for="activeCheck">Active</label>
+        </div>
+
+        <div class="form-check checkbox-inline live-checkbox-div">
+            <input type="checkbox" class="form-check-input active live-checkbox" style="position: relative;" id="liveCheck" [(ngModel)]="session.LiveStatus" [ngModelOptions]="{standalone: true}" (change)="updateStatus()">
+            <label class="form-check-label" for="liveCheck">Live</label>
+        </div>
+
+        <!-- Button placeholder for future ability to edit session details -->
+        <!-- <button id="create" style="margin-top: 0px;" class="btn btn-lg btn-block update-btn" type="submit" [disabled]="!NicknameForm.form.valid">Update Details</button> -->
+
+        <!-- Displays the number of players connected to the session -->
+        <h4 class="num-players-h4">Number of Players: {{totalUser | number }}</h4>
+
+    </div>
+
+    <!-- Button to show the leaderboard for the session -->
+    <div id="container">
+        <button id="showLeaderboard" class="btn btn-lg btn-block leaderboard-btn" type="button" (click)="clickLeaderboard()">View Leaderboard</button>
+    </div>
+
+
+</form>

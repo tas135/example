@@ -1,0 +1,26 @@
+<form class="form-createSession" (ngSubmit)="onSubmit()" #NicknameForm="ngForm">
+
+    <!-- Grey border around the form -->
+    <div class="create-session-border">
+        <h1 class="h3 mb-3 font-weight-normal create-session-h1">Create a Session</h1>
+        <!-- Name and location textboxes  -->
+        <div class="form-group">
+            <label for="sessionName" class="sr-only">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="session.SessionName" id="SessionName" name="SessionName" class="form-control" placeholder="Session Name" required autofocus>
+
+            <label for="sessionLocation" class="sr-only">Location</label>
+            <input type="text" class="form-control" [(ngModel)]="session.Location" id="Location" name="Location" class="form-control" placeholder="Location" required autofocus>
+        </div>
+        <!-- Active checkbox -->
+        <div class="form-group">
+            <div class="form-check checkbox-inline session-checkbox">
+                <input type="checkbox" class="form-check-input active" id="activeCheck" [(ngModel)]="session.ActiveStatus" name="ActiveStatus">
+                <label class="form-check-label" for="activeCheck">Active</label>
+            </div>
+        </div>
+        <!-- Create Session button- disabled until a location and name entered -->
+        <button id="create" class="btn btn-lg btn-block create-btn" type="submit" [disabled]="!NicknameForm.form.valid">Create Session</button>
+    </div>
+    <!-- View Sessions button -->
+    <button id="view" class="btn btn-lg btn-block view-btn" type="button" (click)="viewSession()">View Sessions</button>
+</form>

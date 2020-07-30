@@ -1,0 +1,31 @@
+<h2 class="sessions-h2"> Sessions </h2>
+
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <thead class="session-table">
+            <!-- Table headers -->
+            <tr>
+                <th>Name</th>
+                <th>Active</th>
+                <th>Live</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Retrieve the session name, active status and live status for all sessions in db -->
+            <tr *ngFor="let session of sessionList">
+                <td class="clickable" (click)="selectedSession(session)">{{session.SessionName}}</td>
+                <td scope="row">
+                    <div>
+                        <input type="checkbox" [(ngModel)]="session.ActiveStatus" (change)="updateStatus(session)">
+                    </div>
+                </td>
+                <td scope="row">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" [(ngModel)]="session.LiveStatus" (change)="updateStatus(session)">
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

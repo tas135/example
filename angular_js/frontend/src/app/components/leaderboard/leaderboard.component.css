@@ -1,0 +1,35 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+
+/* Table stylings */
+
+.leaderboard-table {
+    background-color: #008000;
+    color: white;
+}
+
+.table th {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+
+/* Adjusts the image displayed in the leaderboard - 
+Tailored to displaying the leaderboard on a PC screen */
+
+.leaderboard-image {
+    display: block;
+    width: 160px;
+    height: 145px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leaderboard-h2 {
+    margin-bottom: 20px;
+}

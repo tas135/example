@@ -1,0 +1,17 @@
+<div class="border-div-vote">
+
+    <!-- Insert bug image, name and bio -->
+    <img class="bug-image" src={{ImagePath}} alt="bug">
+    <h3 class=" bugname "><b> {{bugName}} </b> </h3>
+    <p> {{Bio}}</p>
+</div>
+
+
+<!-- Rating buttons -->
+<div>
+    <button class="round-button " type="reset" id="one" (click)='imageClick(1)'></button>
+    <button class="round-button" type="reset" id="two" (click)='imageClick(2)'></button>
+    <button class="round-button" type="reset" id="three" (click)='imageClick(3)'></button>
+    <button class="round-button" type="reset" id="four" (click)='imageClick(4)'></button>
+    <button class="round-button" type="reset" id="five" (click)='imageClick(5)'></button>
+</div>

@@ -1,0 +1,9 @@
+<h1 class="h3 mb-3 font-weight-normal sessions-h1">Join a session:</h1>
+
+<!-- Display all active sessions in a vertical list of buttons -->
+
+<body class="btn-group-vertical">
+    <div *ngFor="let sessions of SessionsList">
+        <button type="button" class="btn btn-lg btn-block session-btn" (click)="onClickMe(sessions)" routerLink="/user">{{sessions.SessionName}} </button>
+    </div>
+</body>

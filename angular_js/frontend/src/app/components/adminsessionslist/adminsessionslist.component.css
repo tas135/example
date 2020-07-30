@@ -1,0 +1,32 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+
+/* Table stylings */
+
+.session-table {
+    background-color: #008000;
+    color: white;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table td:hover {
+    font-weight: bold;
+}
+
+
+/* "Sessions" header */
+
+.sessions-h2 {
+    margin-bottom: 20px;
+}

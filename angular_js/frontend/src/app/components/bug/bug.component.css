@@ -1,0 +1,60 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+
+/* Define the image dimensions and position */
+
+.bug-image {
+    max-width: 100%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Bug name stylings */
+
+.bugname {
+    font-family: 'Asap', sans-serif;
+}
+
+
+/* Grey border around the bug details */
+
+.border-div-vote {
+    margin: 0 auto;
+    border-style: solid;
+    border-color: rgb(185, 176, 176);
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 80%;
+    min-height: 75%;
+    margin-bottom: 5px;
+}
+
+
+/* Rating button stylings */
+
+.round-button {
+    background-image: url(../../../assets/black.PNG);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* put the height and width of your rating image here */
+    height: 50px;
+    width: 50px;
+    border: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    margin-left: 0.35em;
+}
+
+.round-button span {
+    display: none;
+}
+
+.round-button:focus {
+    outline: 0;
+}

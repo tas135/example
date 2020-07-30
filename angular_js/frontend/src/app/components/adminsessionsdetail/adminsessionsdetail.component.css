@@ -1,0 +1,128 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+
+/* Form stylings */
+
+.form-sessionDetails {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-sessionDetails,
+.form-sessionDetails .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-sessionDetails .form-control {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-sessionDetails .form-control:focus {
+    z-index: 2;
+}
+
+.form-sessionDetails input[type="text"] {
+    margin-bottom: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/* Button */
+
+.leaderboard-btn,
+.update-btn {
+    background-color: #008000;
+    color: white;
+    border-color: #292e30;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.leaderboard-btn:hover,
+.update-btn:hover {
+    color: white;
+}
+
+
+/* Border */
+
+.session-details-border {
+    margin: 0 auto;
+    border-style: solid;
+    border-color: rgb(185, 176, 176);
+    padding: 20px;
+    padding-bottom: 0px;
+    width: auto;
+    height: auto;
+}
+
+
+/* "Session Details" header */
+
+.session-details-h1 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
+/* Labels */
+
+.name-lbl {
+    float: left;
+    font-size: 15px;
+}
+
+.location-lbl {
+    float: left;
+    font-size: 15px;
+}
+
+
+/* Checkbox stylings */
+
+.active-checkbox-div {
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.live-checkbox-div {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.active-checkbox {
+    margin-right: 5px;
+    vertical-align: middle;
+    bottom: 1px;
+}
+
+.live-checkbox {
+    margin-right: 5px;
+    vertical-align: middle;
+    bottom: 1px;
+}
+
+
+/* "Number of Players" line */
+
+.num-players-h4 {
+    /* make margin-top=30px when 'Update Details' button is added */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #ff6633;
+    font-weight: bold;
+}

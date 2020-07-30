@@ -1,0 +1,44 @@
+<h2 class="leaderboard-h2"> Leaderboard </h2>
+
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <thead class="leaderboard-table">
+            <!-- Table headers -->
+            <tr>
+                <th>Rank</th>
+                <th>Bug</th>
+                <th>Rating</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- Display the top 5 bugs -->
+            <tr *ngFor="let item of leaderboard|slice:0:5;let i=index">
+                <th>{{i+1}}</th>
+                <th valign="middle">{{item.BugName}}</th>
+                <th>{{item.AvgRating | number :'1.2-2'}}</th>
+                <th><img src={{item.ImagePath}} alt="bug" class="leaderboard-image"></th>
+            </tr>
+
+
+            <!-- Add empty row between first 5 items and final item  -->
+            <tr>
+                <th> ...</th>
+                <th> ...</th>
+                <th> ...</th>
+                <th> </th>
+            </tr>
+
+
+            <!-- Display the last bug -->
+            <tr *ngFor="let item of leaderboard | slice:leaderboard.length - 1">
+                <th>{{ leaderboard.length }}</th>
+                <th>{{item.BugName}}</th>
+                <th>{{item.AvgRating | number :'1.2-2'}}</th>
+                <th><img src={{item.ImagePath}} alt="bug" class="leaderboard-image"></th>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
